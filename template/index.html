@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon.ico">
+	<link rel="icon" sizes="16x16 32x32 64x64" href="./img/favicon.ico">
+	<link rel="icon" type="./image/png" sizes="196x196" href="https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.0-9/150291064_2165305170269775_9074058394505394112_n.jpg?_nc_cat=105&ccb=3&_nc_sid=dbeb18&_nc_eui2=AeE4O7alaq45u9XMqNIZRLECIu1y_RA6wa4i7XL9EDrBrljlQOhaAxEl-hJQ5gW8IVbBHFR2xS_gHLBHEXLTvn49&_nc_ohc=oSefEsrr4lMAX9gxUwW&_nc_ht=scontent.fbkk10-1.fna&oh=ce55023ab9bc36306e3e0e0138d071cd&oe=604E9F0C">
+	<link rel="icon" type="./image/png" sizes="160x160" href="./img/favicon-160.png">
+	<link rel="icon" type="./image/png" sizes="96x96" href="./img/favicon-96.png">
+	<link rel="icon" type="./image/png" sizes="64x64" href="./img/favicon-64.png">
+	<link rel="icon" type="./image/png" sizes="32x32" href="./img/favicon-32.png">
+	<link rel="icon" type="./image/png" sizes="16x16" href="./img/favicon-16.png">
+	<link rel="apple-touch-icon" href="./img/favicon-57.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="./img/favicon-114.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="./img/favicon-72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="./img/favicon-144.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="./img/favicon-60.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="./img/favicon-120.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="./img/favicon-76.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="./img/favicon-152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="./img/favicon-180.png">
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+	<meta name="msapplication-TileImage" content="img/favicon-144.png">
+	<meta name="msapplication-config" content="img/browserconfig.xml">
+    <title>Instagram</title>
+    <meta name="description" content="Clone da interface da página inicial da Instagram desenvolvido por Guilherme Magno durante o Bootcamp HTML Web Developer da DIO.">
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Instagram"/>
+    <meta property="og:description" content="Clone da interface da página inicial da Instagram desenvolvido por Guilherme Magno durante o Bootcamp HTML Web Developer da DIO."/>
+    <meta property="og:url" content="http://devmagno.github.io/ui-clone-instagram"/>
+    <meta property="og:image" content="http://devmagno.github.io/ui-clone-instagram/img/og-image.png"/>
+    <meta property="og:site_name" content="UI Clone Instagram"/>
+</head>
+<style>
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+body {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+.instagram-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 60%;
+    height: 100vh;
+}
+
+.instagram-phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+.instagram-phone img {
+    height: 50rem;
+}
+
+.instagram-continue {
+    display: flex;
+    align-items: center; /* horizontal */
+    justify-content: space-around; /* vertical */
+    flex-direction: column;
+    width: 50%;
+    min-height: 34rem;
+}
+
+.group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    padding: 1.3rem 0;
+    border: 1px solid lightgray;
+}
+
+.group:nth-child(1){
+    min-height: 19rem;
+}
+.instagram-logo {
+    height: 3rem;
+}
+.profile-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profile-photo img{
+    height: 6rem;
+}
+.instagram-login {
+    background-color: rgba(0, 149, 246, 1);
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s
+}
+.instagram-login:hover {
+    background-color: rgba(0, 149, 246, 0.8)
+}
+.instagram-logout {
+    color: rgba(0, 149, 246, 1);
+    margin-top: 1rem;
+    transition: color 0.2s
+}
+.instagram-logout:hover {
+    color: rgba(0, 149, 246, 0.8)
+}
+
+.not-account {
+    color: rgba(160, 160, 160, 1);
+}
+.link-blue {
+    color: rgb(0, 149, 246);
+    transition: color 0.2s;
+}
+.link-blue:hover {
+    color: rgba(0, 149, 246, 0.8);
+}
+
+.get-the-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.3rem 0;
+}
+.download {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+}
+.app-download {
+    height: 3rem;
+    width: 10rem;
+    background-size: cover;
+}
+.app-download:nth-child(1){
+    background-image: url('./img/app-store-button.png');
+}
+.app-download:nth-child(2){
+    background-image: url('./img/google-play-button.png');
+}
+
+@media(max-width: 1024px) {
+    .instagram-wrapper {
+        width: 90%;
+    }
+}
+@media (max-width: 650px) {
+    body {
+        background-color: white;
+    }
+
+    .group {
+        border: 1px solid transparent;
+    }
+
+    .instagram-phone {
+        display: none;
+    }
+
+    .instagram-continue {
+        width: 100%;
+    }
+}</style>
+<body>
+    <div class="instagram-wrapper">
+        <div class="instagram-phone">
+            <img src="https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.0-9/149379938_2165299413603684_790740934346233603_o.jpg?_nc_cat=108&ccb=3&_nc_sid=730e14&_nc_eui2=AeFiOedjeeX-MBcdytmjbDDHJxtRMGhpIvcnG1EwaGki951kUyWlbEmLwk8oKq2kbuf5oSta7vGREBWUIgRJTSDF&_nc_ohc=4mmHbZtflTsAX8qjzo1&_nc_ht=scontent.fbkk10-1.fna&oh=1d20d6fc58997edb0fc40b7bb79d5beb&oe=604BD55C" alt="Celular">
+        </div>
+        <div class="instagram-continue">
+            <div class="group">
+                <img src="https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.0-9/149810682_2165309510269341_7809219641586129636_n.jpg?_nc_cat=103&ccb=3&_nc_sid=dbeb18&_nc_eui2=AeFcDu6eu95ZXbjb_lzw60928sEXL6DPwb7ywRcvoM_BvtDtXg_APlcWi-l4al0xtUhoCvRgSHa3i99Tp9L-JjtU&_nc_ohc=dVKpcp-znvoAX-zV49p&_nc_ht=scontent.fbkk10-1.fna&oh=9b6352795a2cc911a0c433d2002f10b8&oe=604E8647" alt="Instagram logo" class="instagram-logo">Instagram
+                <div class="profile-photo">
+                    <img src="https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.0-9/147690348_2161157000684592_6573472373240808944_o.jpg?_nc_cat=107&ccb=3&_nc_sid=174925&_nc_eui2=AeFZ0DbwlUB_2wbiVLnF-UszAWRKQeCbUjYBZEpB4JtSNmpysLd5QGay3J_bpA82Ara4u-LtkaGb747vPL1qo97n&_nc_ohc=QND8kWvaH8oAX9_sDbF&_nc_ht=scontent.fbkk10-1.fna&oh=df1939ebc12f666e15d591f01b720fa1&oe=604F6291" alt="Foto de perfil">
+                </div>
+
+                <a href="https://www.instagram.com/32e.coe.psu.ac.th/" target="_blank" class="instagram-login">Continue as 32e.oce.psu.ac.th</a>
+                <a href="https://www.instagram.com/accounts/login/?next=%2F32e.coe.psu.ac.th%2F&source=desktop_nav" target="_blank" class="instagram-logout">Remove account</a>
+            </div>
+            <div class="group">
+                <p class="not-account">Not 32e.coe.psu.ac.th?</p>
+                <p class="not-account">
+                    <a href="https://www.instagram.com/accounts/login/?next=%2F32e.coe.psu.ac.th%2F&source=desktop_nav" class="link-blue">Switch accounts</a>
+                    or <a href="https://www.instagram.com/accounts/login/?next=%2F32e.coe.psu.ac.th%2F&source=desktop_nav" class="link-blue">Sign Up</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
